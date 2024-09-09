@@ -1,10 +1,6 @@
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 
-new SimpleLightbox('.some-element a', {
-  captions: true,
-  captionDelay: 250,
-});
 const images = [
   {
     preview:
@@ -84,3 +80,8 @@ const markup = images
   .join('');
 list.innerHTML = markup;
 console.log(markup);
+let lightbox = new SimpleLightbox('.gallery a', {
+  captions: true,
+  captionsData: 'alt',
+  captionDelay: 250,
+});
